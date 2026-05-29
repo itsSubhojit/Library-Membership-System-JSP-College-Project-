@@ -1,0 +1,560 @@
+/*
+    Library Membership System - Custom Modern Dashboard Stylesheet
+    Author: Antigravity
+    Typography: Plus Jakarta Sans
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Color Palette */
+    --sidebar-bg: #0f172a;       /* Deep slate/navy for Link Division */
+    --display-bg: #f8fafc;       /* Light clean slate for Display Division */
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #f1f5f9;
+    --primary: #4f46e5;          /* Indigo accent */
+    --primary-hover: #4338ca;
+    --accent: #10b981;           /* Emerald accent */
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--display-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* Master Layout Grid */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ----------------------------------------------------
+   Left Division (Link Division / Sidebar)
+---------------------------------------------------- */
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar-logo {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+}
+
+.sidebar-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.sidebar-title span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.menu-item a:hover {
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(4px);
+}
+
+.menu-item.active a {
+    color: white;
+    background-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.menu-icon {
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer info inside sidebar */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 1rem 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ----------------------------------------------------
+   Right Division (Display Division / Content Area)
+---------------------------------------------------- */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--display-bg);
+    padding: 2.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-main);
+}
+
+.content-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Modern Card Layouts */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Highlighting info boxes */
+.info-box {
+    background-color: rgba(79, 70, 229, 0.05);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    color: #3730a3;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------
+   Table / Data Grid Styles (Member List)
+---------------------------------------------------- */
+.table-container {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.member-table th {
+    background-color: #f1f5f9;
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+}
+
+.member-table td {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.member-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.member-table tbody tr {
+    transition: var(--transition);
+}
+
+.member-table tbody tr:hover {
+    background-color: #faf5ff;
+}
+
+/* Custom badges/tags */
+.badge-id {
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.badge-name {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.badge-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #ecfdf5;
+    color: #065f46;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.badge-date.expired {
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+/* Empty database state */
+.empty-state {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--border);
+}
+
+/* ----------------------------------------------------
+   Form Styles (New Member)
+---------------------------------------------------- */
+.form-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: #f8fafc;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* Radio buttons container */
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.25rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    outline: none;
+    transition: var(--transition);
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked {
+    border-color: var(--primary);
+}
+
+.radio-option input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.radio-option:hover input[type="radio"] {
+    border-color: var(--primary);
+}
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ----------------------------------------------------
+   Responsive Layout (Media Queries)
+---------------------------------------------------- */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .sidebar-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .menu-item {
+        flex: 1 1 auto;
+    }
+
+    .menu-item a {
+        padding: 0.75rem 1rem;
+        justify-content: center;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .content-header h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ----------------------------------------------------
+   Home Page — Member's Information Panel
+   Matches the display division layout from the PDF.
+---------------------------------------------------- */
+.info-panel {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem 2.5rem;
+    max-width: 680px;
+}
+
+.info-panel-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.info-panel-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+}
+
+/* ----------------------------------------------------
+   Form Card — heading style (replaces inline style)
+---------------------------------------------------- */
+.form-card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+/* Extra bottom spacing on the last form field before submit */
+.form-group-last {
+    margin-bottom: 2.5rem;
+}
+
