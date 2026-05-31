@@ -16,8 +16,7 @@
             <div class="sidebar-header">
                 <div class="sidebar-logo">LM</div>
                 <div class="sidebar-title">
-                    Library Admin
-                    <span>Membership System</span>
+                    <span>System</span>
                 </div>
             </div>
 

@@ -18,8 +18,7 @@
             <div class="sidebar-header">
                 <div class="sidebar-logo">LM</div>
                 <div class="sidebar-title">
-                    Library Admin
-                    <span>Membership System</span>
+                    <span>System</span>
                 </div>
             </div>
 
@@ -72,11 +71,11 @@
                     </thead>
                     <tbody>
                         <%
-                            /* -------------------------------------------------------
+                            /*
                                JSP JDBC Program — connects to MySQL 'members' database,
                                reads memberlist table and displays records.
                                As required by assignment BCSL-057(Set-IV).
-                            ------------------------------------------------------- */
+                            */
                             Connection conn = null;
                             Statement stmt = null;
                             ResultSet rs   = null;

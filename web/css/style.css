@@ -1,8 +1,3 @@
-/*
-    Library Membership System - Custom Modern Dashboard Stylesheet
-    Author: Antigravity
-    Typography: Plus Jakarta Sans
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
@@ -49,9 +44,7 @@ body {
     min-height: 100vh;
 }
 
-/* ----------------------------------------------------
-   Left Division (Link Division / Sidebar)
----------------------------------------------------- */
+/*  Left Division (Link Division / Sidebar) */
 .sidebar {
     width: 280px;
     background-color: var(--sidebar-bg);
@@ -95,9 +88,9 @@ body {
 
 .sidebar-title span {
     display: block;
-    font-size: 0.75rem;
+    font-size: 1.50rem;
     font-weight: 500;
-    color: var(--text-muted);
+    /*color: var(--text-muted);*/
     text-transform: uppercase;
     margin-top: 2px;
 }
@@ -151,9 +144,7 @@ body {
     line-height: 1.5;
 }
 
-/* ----------------------------------------------------
-   Right Division (Display Division / Content Area)
----------------------------------------------------- */
+/* Right Division (Display Division / Content Area) */
 .main-content {
     flex-grow: 1;
     background-color: var(--display-bg);
@@ -245,9 +236,7 @@ body {
     line-height: 1.6;
 }
 
-/* ----------------------------------------------------
-   Table / Data Grid Styles (Member List)
----------------------------------------------------- */
+/*  Table / Data Grid Styles (Member List) */
 .table-container {
     background-color: var(--card-bg);
     border-radius: var(--radius-lg);
@@ -340,9 +329,7 @@ body {
     color: var(--border);
 }
 
-/* ----------------------------------------------------
-   Form Styles (New Member)
----------------------------------------------------- */
+/* Form Styles (New Member) */
 .form-card {
     background-color: var(--card-bg);
     border-radius: var(--radius-lg);
@@ -460,9 +447,7 @@ body {
     transform: translateY(0);
 }
 
-/* ----------------------------------------------------
-   Responsive Layout (Media Queries)
----------------------------------------------------- */
+/*    Responsive Layout (Media Queries) */
 @media (max-width: 992px) {
     .sidebar {
         width: 240px;
@@ -513,10 +498,8 @@ body {
     }
 }
 
-/* ----------------------------------------------------
-   Home Page — Member's Information Panel
-   Matches the display division layout from the PDF.
----------------------------------------------------- */
+/*    Home Page — Member's Information Panel
+   Matches the display division layout from the PDF. */
 .info-panel {
     background-color: var(--card-bg);
     border-radius: var(--radius-lg);
@@ -541,9 +524,7 @@ body {
     color: var(--text-muted);
 }
 
-/* ----------------------------------------------------
-   Form Card — heading style (replaces inline style)
----------------------------------------------------- */
+/*   Form Card — heading style (replaces inline style) */
 .form-card-title {
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
