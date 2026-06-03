@@ -7,6 +7,8 @@
     <title>New Member Form - Library Membership System</title>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="dashboard-container">
@@ -24,20 +26,20 @@
                 <ul class="sidebar-menu">
                     <li class="menu-item">
                         <a href="home.jsp">
-                            <span class="menu-icon">🏠</span>
+                            <span class="menu-icon"><i class="fas fa-house"></i></span>
                             Home
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="member-list.jsp">
-                            <span class="menu-icon">&#128203;</span>
+                            <span class="menu-icon"><i class="fas fa-users"></i></span>
                             Member List
                         </a>
                     </li>
                     <!-- Form for New Member is active on this page -->
                     <li class="menu-item active">
                         <a href="new-member.jsp">
-                            <span class="menu-icon">👤</span>
+                            <span class="menu-icon"><i class="fas fa-user-plus"></i></span>
                             Form for New Member
                         </a>
                     </li>

@@ -152,13 +152,15 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .content-header {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    align-items: center;
+    text-align: center;
 }
 
 .content-header h1 {
@@ -335,12 +337,14 @@ body {
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
-    padding: 2.5rem;
-    max-width: 600px;
+    padding: 2.5rem 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-group label {
@@ -491,10 +495,16 @@ body {
 
     .main-content {
         padding: 1.5rem;
+        gap: 1rem;
     }
 
     .content-header h1 {
         font-size: 1.75rem;
+    }
+
+    .form-card {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -507,6 +517,7 @@ body {
     box-shadow: var(--shadow-sm);
     padding: 2rem 2.5rem;
     max-width: 680px;
+    margin: 0 auto;
 }
 
 .info-panel-title {
@@ -536,6 +547,13 @@ body {
 
 /* Extra bottom spacing on the last form field before submit */
 .form-group-last {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Center the submit button */
+.form-card form > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
